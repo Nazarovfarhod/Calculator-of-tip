@@ -44,6 +44,19 @@ billEl.addEventListener("input", () => {
 
 personAmount.addEventListener("input", () => {
   peopleAmount = +personAmount.value;
+  const personAmountEl = document.getElementById(
+    "personContainer"
+  ) as HTMLElement;
+  const errorZero = document.getElementById("errorZero") as HTMLElement;
+  if (parseFloat(personAmount.value) === 0) {
+    personAmountEl.classList.add("error");
+    errorZero.classList.add("show");
+    errorZero.classList.remove("hid");
+  } else {
+    personAmount.classList.remove("error");
+    errorZero.classList.remove("show");
+    errorZero.classList.add("hid");
+  }
   calc();
 });
 
@@ -69,29 +82,16 @@ tips.forEach((tip: any) => {
 });
 
 reset.addEventListener("click", () => {
-  const personAmountEl = document.getElementById(
-    "personContainer"
-  ) as HTMLElement;
-  const errorZero = document.getElementById("errorZero") as HTMLElement;
-  if (parseFloat(personAmount.value) === 0) {
-    personAmountEl.classList.add("error");
-    errorZero.classList.add("show");
-    errorZero.classList.remove("hid");
-  } else {
-    personAmount.classList.remove("error");
-    errorZero.classList.remove("show");
-    errorZero.classList.add("hid");
-    billEl.value = "";
-    personAmount.value = "";
-    custom.value = "";
-    tips.forEach((tip: any) => {
-      tip.checked = false;
-    });
-    document.getElementById("tipPrice")!.textContent = "$0.00";
-    document.getElementById("totalPrice")!.textContent = "$0.00";
+  billEl.value = "";
+  personAmount.value = "";
+  custom.value = "";
+  tips.forEach((tip: any) => {
+    tip.checked = false;
+  });
+  document.getElementById("tipPrice")!.textContent = "$0.00";
+  document.getElementById("totalPrice")!.textContent = "$0.00";
 
-    billAmount = 0;
-    tipAmount = 0;
-    peopleAmount = 0;
-  }
+  billAmount = 0;
+  tipAmount = 0;
+  peopleAmount = 0;
 });
