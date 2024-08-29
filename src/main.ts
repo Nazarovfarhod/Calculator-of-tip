@@ -52,12 +52,14 @@ personAmount.addEventListener("input", () => {
     personAmountEl.classList.add("error");
     errorZero.classList.add("show");
     errorZero.classList.remove("hid");
+    document.getElementById("tipPrice")!.textContent = "$0.00";
+    document.getElementById("totalPrice")!.textContent = "$0.00";
   } else {
-    personAmount.classList.remove("error");
+    personAmountEl.classList.remove("error");
     errorZero.classList.remove("show");
     errorZero.classList.add("hid");
+    calc();
   }
-  calc();
 });
 
 custom.addEventListener("input", () => {
@@ -82,6 +84,10 @@ tips.forEach((tip: any) => {
 });
 
 reset.addEventListener("click", () => {
+  const errorZero = document.getElementById("errorZero") as HTMLElement;
+  const personAmountEl = document.getElementById(
+    "personContainer"
+  ) as HTMLElement;
   billEl.value = "";
   personAmount.value = "";
   custom.value = "";
@@ -90,8 +96,11 @@ reset.addEventListener("click", () => {
   });
   document.getElementById("tipPrice")!.textContent = "$0.00";
   document.getElementById("totalPrice")!.textContent = "$0.00";
-
   billAmount = 0;
   tipAmount = 0;
   peopleAmount = 0;
+
+  personAmountEl.classList.remove("error");
+  errorZero.classList.remove("show");
+  errorZero.classList.add("hid");
 });
