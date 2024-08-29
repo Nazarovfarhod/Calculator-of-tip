@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/calculator.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="splitter">
+        <img
+          src="./public/splitterImg.png"
+          width="86.5"
+          height="53"
+          alt="splitter image"
+        />
+      </div>
+      <div class="main-container">
+        <div class="container-left">
+          <label class="bill-label">
+            <p class="label-text">Bill</p>
+            <div class="bill-container">
+              <img
+                class="bill-img"
+                src="./public/dollor.svg"
+                width="10"
+                height="15.5"
+                alt=""
+              />
+              <input
+                class="bill-input"
+                id="billInput"
+                type="text"
+                placeholder="$144.55"
+              />
+            </div>
+          </label>
+          <div>
+            <p class="label-text">Select Tip %</p>
+            <div class="tip-label">
+              <label class="tip-input-container">
+                <input
+                  name="tipInput"
+                  type="radio"
+                  class="tip-input"
+                  value="5"
+                />
+                <span>5%</span>
+              </label>
+
+              <label class="tip-input-container">
+                <input
+                  name="tipInput"
+                  type="radio"
+                  class="tip-input"
+                  value="10"
+                />
+                <span>10%</span>
+              </label>
+
+              <label class="tip-input-container">
+                <input
+                  name="tipInput"
+                  type="radio"
+                  class="tip-input"
+                  value="15"
+                />
+                <span>15%</span>
+              </label>
+
+              <label class="tip-input-container">
+                <input
+                  name="tipInput"
+                  type="radio"
+                  class="tip-input"
+                  value="25"
+                />
+                <span>25%</span>
+              </label>
+
+              <label class="tip-input-container">
+                <input
+                  name="tipInput"
+                  type="radio"
+                  class="tip-input"
+                  value="50"
+                />
+                <span>50%</span>
+              </label>
+              <div class="tip-input-container-custom">
+                <input
+                  class="tip-custom"
+                  name="tipInput"
+                  type="text"
+                  id="custom"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+          </div>
+          <label class="person-label">
+            <p class="label-text">
+              <span>Number of People</span
+              ><span class="errorZero hid" id="errorZero">Can’t be zero</span>
+            </p>
+            <div class="person-container" id="personContainer">
+              <img
+                class="person-img"
+                src="./public/person.svg"
+                width="12"
+                height="17.5"
+                alt=""
+              />
+              <input
+                class="person-input"
+                id="personAmount"
+                type="text"
+                placeholder="Number of People"
+              />
+            </div>
+          </label>
+        </div>
+
+        <div class="container-right">
+          <div class="tip-amount-container">
+            <div class="tip-amount">
+              <p>Tip Amount</p>
+              <small>/ person</small>
+            </div>
+            <p class="tip-price" id="tipPrice">$0.00</p>
+          </div>
+          <div class="tip-amount-container">
+            <div class="tip-amount">
+              <p>Total</p>
+              <small>/ person</small>
+            </div>
+            <p class="tip-price" id="totalPrice">$0.00</p>
+          </div>
+          <div class="reset-container">
+            <button class="reset-btn" id="reset">RESET</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/src/main.ts"></script>
+  </body>
+</html>

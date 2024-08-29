@@ -1,0 +1,267 @@
+@import url(https://fonts.googleapis.com/css2?family=Space+Mono:wght@100;200;300;400;500;600;700&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: #c5e4e7;
+  height: 100vh;
+}
+
+.container {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.splitter {
+  margin-bottom: 58px;
+  margin-top: 28px;
+  width: 100%;
+  text-align: center;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  background-color: #fff;
+  box-shadow: 0px 32px 43px 0px #4fa6af33;
+  border-radius: 25px;
+  padding-top: 45px;
+  padding-left: 48px;
+  padding-bottom: 48px;
+  padding-right: 32px;
+}
+
+.label-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.7px;
+  text-align: left;
+  color: #5e7a7d;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.bill-label {
+  width: 100%;
+  padding-left: 17px;
+}
+.bill-container {
+  display: flex;
+  align-items: center;
+  background-color: #f3f9fa;
+  height: 48px;
+  padding-left: 17px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.bill-input {
+  border: none;
+  font-family: "Space Mono", monospace;
+  width: 100%;
+  height: 48px;
+  font-size: 24px;
+  background-color: #f3f9fa;
+  text-align: right;
+  padding-right: 17px;
+  border-radius: 10px;
+}
+
+.bill-input:focus {
+  outline: none;
+}
+
+input[type="radio"]:checked + span {
+  color: #0dd4ac;
+}
+
+.tip-input {
+  appearance: none;
+}
+
+.tip-label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tip-input-container {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: #00474b;
+  width: 117px;
+  border-radius: 7px;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+}
+
+.tip-input-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.tip-input-container:active {
+  box-shadow: none;
+}
+
+.tip-input-container-custom {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: #f3f9fa;
+  width: 117px;
+  border-radius: 7px;
+}
+
+.tip-custom {
+  font-family: "Space Mono", monospace;
+  width: 100%;
+  height: inherit;
+  background-color: #f3f9fa;
+  border: none;
+  color: #547878;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35.54px;
+}
+.tip-custom:focus {
+  outline: none;
+}
+
+.person-label {
+  width: 100%;
+  padding-left: 17px;
+}
+.person-container {
+  display: flex;
+  align-items: center;
+  background-color: #f3f9fa;
+  height: 55px;
+  padding-left: 17px;
+  border-radius: 10px;
+}
+
+.person-input {
+  border: none;
+  font-family: "Space Mono", monospace;
+  width: 100%;
+  height: 48px;
+  font-size: 24px;
+  background-color: #f3f9fa;
+  text-align: right;
+  padding-right: 17px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.person-input:focus {
+  outline: none;
+}
+
+.container-right {
+  background-color: #00474b;
+  border-radius: 20px;
+  padding: 40px;
+  color: #fff;
+}
+
+.tip-amount-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+}
+.tip-amount p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.7px;
+  text-align: left;
+}
+
+.tip-amount small {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19.25px;
+  text-align: left;
+  color: #7f9d9f;
+}
+
+.tip-price {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 71.09px;
+  letter-spacing: -1px;
+  text-align: right;
+  color: #26c2ae;
+}
+
+.reset-container {
+  width: 100%;
+  border-radius: 5px;
+}
+.reset-btn {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #26c2ae;
+  color: #00474b;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29.62px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.reset-btn:hover {
+  background-color: #9fe8df;
+}
+
+@media (max-width: 750px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    background-color: #fff;
+    box-shadow: 0px 32px 43px 0px #4fa6af33;
+    border-radius: 25px;
+    padding-top: 25px;
+    padding-left: 28px;
+    padding-bottom: 28px;
+    padding-right: 12px;
+  }
+}
+
+.error {
+  border: 3px solid red;
+}
+
+.errorZero {
+  color: #e17457;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.7px;
+  text-align: right;
+}
+
+.hid {
+  display: none;
+}
+
+.show {
+  display: block;
+}
