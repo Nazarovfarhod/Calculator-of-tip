@@ -100,6 +100,8 @@ reset.addEventListener("click", () => {
   tipAmount = 0;
   peopleAmount = 0;
 
+  window.location.reload();
+
   personAmountEl.classList.remove("error");
   errorZero.classList.remove("show");
   errorZero.classList.add("hid");
